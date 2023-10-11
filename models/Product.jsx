@@ -15,7 +15,7 @@ const Product = mongoose.model("Product", productSchema);
 const products = [
   {
     name: "mammoth vase",
-    image: "pexels-vlada-karpovich-7902913.png",
+    image: "pexels-vlada-karpovich-7902913.jpg",
     color: "deep sand",
     details:
       "Elevated, handcrafted, over-sized pottery decor suitable for indoor & outdoor use",
@@ -66,5 +66,4 @@ const products = [
 ];
 
 // module.exports for this file is JUST the product variable
-module.exports = products;
-module.exports = Product;
+module.exports = { Product, products };
