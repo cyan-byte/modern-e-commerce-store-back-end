@@ -14,12 +14,23 @@ const app = express();
 
 // Connects to MongoDB database
 mongoose.connect(
-  "mongodb+srv://aliau2050:p6Fz1zNDYJGtUDt5@cluster0.qqaxcwg.mongodb.net/?retryWrites=true&w=majority",
+  process.env.MONGO_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useCreateIndex: true,
+  },
+  (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("successully connected");
+    }
   }
 );
+mongoose.connection.once("open", () => {
+  console.log("Connected to mongo");
+});
 
 // Middleware and other configurations
 
@@ -29,7 +40,6 @@ app.use(cors());
 //express-session middleware
 app.use(
   session({
-    secret: "WHAT Rocks?!",
     resave: false,
     saveUninitialized: true,
   })
@@ -42,23 +52,26 @@ app.use("/api/cart", cartRoutes);
 // Retrieve the user's cart data (session-based?)
 app.get("/api/cart", cartController.getCart);
 // get list of all products
-app.get('/api/products', productController.getProducts);
+app.get("/api/products", productController.getProducts);
 
 // get product by ID
-app.get('/api/products/:id', productController.getProductById);
-
+app.get("/api/products/:id", productController.getProductById);
 
 // Add an item to the cart
 app.post("/api/cart", cartController.addToCart);
-app.post('/api/products', productController.addProduct);
+app.post("/api/products", productController.addProduct);
 
 // Update an existing product from cart
-app.put('/api/products/:id', productController.updateProduct);
+app.put("/api/products/:id", productController.updateProduct);
 
 // Delete a product from cart
-app.delete('/api/products/:id', productController.deleteProduct);
+app.delete("/api/products/:id", productController.deleteProduct);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
+
+app.get("/", (req, res) => {
+  res.send("Hello, World!");
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

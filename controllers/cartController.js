@@ -1,6 +1,6 @@
 // Controller for managing the shopping cart
 
-const { Cart } = require("../models/Cart");
+const { Cart } = require("../models/Cart.jsx");
 
 // Add an item to the cart
 const addToCart = (req, res) => {

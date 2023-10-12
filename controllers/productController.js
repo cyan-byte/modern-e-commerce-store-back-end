@@ -1,5 +1,5 @@
 // controllers/productController.js
-const { Product } = require('../models/Product');
+const Product = require("../models/Product.jsx");
 
 // Get a list of all products
 const getAllProducts = (req, res) => {
@@ -27,12 +27,17 @@ const addProduct = (req, res) => {
 const updateProduct = (req, res) => {
   const { id } = req.params;
   const updateData = req.body;
-  Product.findByIdAndUpdate(id, updateData, { new: true }, (err, updatedProduct) => {
-    if (err) {
-      return res.status(500).json({ error: err.message });
+  Product.findByIdAndUpdate(
+    id,
+    updateData,
+    { new: true },
+    (err, updatedProduct) => {
+      if (err) {
+        return res.status(500).json({ error: err.message });
+      }
+      return res.status(200).json(updatedProduct);
     }
-    return res.status(200).json(updatedProduct);
-  });
+  );
 };
 
 // Delete a product by ID

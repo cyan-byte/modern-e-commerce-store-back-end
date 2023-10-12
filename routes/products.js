@@ -1,16 +1,20 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const { Product } = require('../models/Product');
 
-// Get a list of all products
-router.get('/', (req, res) => {
-  Product.find({}, (err, products) => {
-    if (err) {
-      res.status(500).json({ error: err.message });
-    } else {
-      res.status(200).json(products);
+// this route should get a product's details by its ID...
+router.get("/:productId", async (req, res) => {
+  try {
+    const productId = req.params.productId;
+    const product = await Product.findById(productId);
+
+    if (!product) {
+      return res.status(404).json({ message: "Product not found" });
     }
-  });
+
+    res.status(200).json(product);
+  } catch (error) {
+    res.status(500).json({ message: "Internal server error" });
+  }
 });
 
 module.exports = router;
