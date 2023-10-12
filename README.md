@@ -94,6 +94,9 @@ https://blog.greenroots.info/3-quick-ways-to-add-fonts-to-your-react-app
 
 ^^ Finding that really made my day! :D
 
+## CSS Transition on Home Page
+https://www.w3schools.com/css/css3_transitions.asp
+
 ## The Full Stack Junkie
 
 I used the beginning portion of this video to add to my backend (up to 38:59 [it's almost 4 hours long in total]):
