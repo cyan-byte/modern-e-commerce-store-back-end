@@ -32,7 +32,7 @@ I really enjoy using Figma to design UIs and this project was no exception! (Fig
 
 ### Front-end:
 
-will use Render.com
+https://modern-e-commerce-store-front-end-1-1.onrender.com
 
 ### Back-end:
 
