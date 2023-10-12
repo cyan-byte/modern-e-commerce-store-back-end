@@ -30,8 +30,13 @@ I really enjoy using Figma to design UIs and this project was no exception! (Fig
 
 # DEPLOYMENT LINKS:
 
-Front-end: will use Render.com
-Back-end: "
+### Front-end:
+
+will use Render.com
+
+### Back-end:
+
+https://modern-e-commerce-store.onrender.com/api/products
 
 # Unsolved Problems:
 
@@ -46,9 +51,11 @@ I can see my API database info that I typed with my own hands on the MongoDB web
 At first, I kept receiving the same exact error for hours before taking a quick night nap (Products module not found). Adding .jsx to the end of the filename is what fixed that error:
 
 ### P.S.
+
 It happened again, but I added '.jsx' at the end of the import for the productControllers.js file as well..
 
 ### Broken Cart Page
+
 Here's a screenshot of the broken cart page. Besides the unfinished styling, I wanted to add a static image of a product so that you could see close to what it's supposed to look like. The information is supposed to load from my API functions:
 ![Talon Store Cart Issue Screenshot](public/talon-store-screenshot5.png)
 
