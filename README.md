@@ -19,10 +19,13 @@ This is the products page. It uses gigantic product title names (I'm just loving
 ![Talon Store Products Screenshot](public/talon-store-screenshot4.png)
 
 # Technologies Used:
+
 ### Programming Languages & Database(s)
+
 I used MongoDB, Express, React, Node, (MERN), HTML, JavaScript, CSS, JSX to build this app. I planned to build my own API, but might end up sourcing an already existing one due to beginner's issues that will be worked out in the future.
 
 ## Figma
+
 I really enjoy using Figma to design UIs and this project was no exception! (Figma is an "exceptional" design tool though :D)
 
 # DEPLOYMENT LINKS:
@@ -30,10 +33,22 @@ I really enjoy using Figma to design UIs and this project was no exception! (Fig
 Front-end: will use Render.com
 Back-end: "
 
-# UNSOLVED PROBLEMS:
+# Unsolved Problems:
 
 I had some real trouble with getting my API to work. I'd like to add more products to the store, as much as a normal online store would have.
 
+# UPDATE! I am so happy to see this at 4 AM!:
+
+I can see my API database info that I typed with my own hands on the MongoDB website (10/12/2023):
+
+![MongoDB is finally working with me!](public/mongoDB-SUCCESS.png)
+
+At first, I kept receiving the same exact error for hours before taking a quick night nap (Products module not found). Adding .jsx to the end of the filename is what fixed that error:
+
+### P.S.
+It happened again, but I added '.jsx' at the end of the import for the productControllers.js file as well..
+
+### Broken Cart Page
 Here's a screenshot of the broken cart page. Besides the unfinished styling, I wanted to add a static image of a product so that you could see close to what it's supposed to look like. The information is supposed to load from my API functions:
 ![Talon Store Cart Issue Screenshot](public/talon-store-screenshot5.png)
 
@@ -57,11 +72,13 @@ Sometimes I wonder if I put too much emphasis on the design, but as long as the 
 # SOURCES
 
 ### Getting the logo to slowly appear in the top left corner of the Home page after scrolling a set number of pixels (230px is my number for the TALON homepage):
+
 https://laracasts.com/discuss/channels/javascript/bootstrap-navbar-changing-logo-on-scroll
 
 I added a second "NavBar2" component for this to only happen on the Home page since there's already a gigantic logo there. However, when the user scrolls, that huge logo will scroll off-screen. Once it is no longer readable, the smaller logo will appear at the top left.
 
-### Past Per Scholas assignments and projects for reference
+### Past Per Scholas assignments and projects for reference (Per Scholas is where I took an intensive Software Engineering training course)
+
 The Fruits app, for example . . .
 
 ### I'm happy to report that this article helped me with importing the fonts that I downloaded and included in my Figma design file. I used the @fontface option since I'm using React and also because the fonts are not hosted online:
@@ -69,6 +86,11 @@ The Fruits app, for example . . .
 https://blog.greenroots.info/3-quick-ways-to-add-fonts-to-your-react-app
 
 ^^ Finding that really made my day! :D
+
+## The Full Stack Junkie
+
+I used the beginning portion of this video to add to my backend (up to 38:59 [it's almost 4 hours long in total]):
+https://www.youtube.com/watch?v=0divhP3pEsg&t=2339s&ab_channel=TheFullStackJunkie
 
 ## Image Sources:
 
@@ -117,7 +139,8 @@ Artisan 3:
 Photo by Antoni Shkraba from Pexels: https://www.pexels.com/photo/person-making-clay-pot-4706134/
 
 ### Some default text for reference . . .
- Getting Started with Create React App
+
+Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
